@@ -1,0 +1,38 @@
+{% for row in data %}
+  {{ row.gettype() }}
+  <h2>{{ row.title.value }}</h2>
+  {% if row.field_username.value is not empty %}
+    <p><em> {{ "USERNAME : " ~ row.field_username.value }} </em></p>
+  {% endif %}
+  {% if row.field_address.address_name is not empty or row.field_address.street is not empty %}
+    <p> {{ "ADDRESS : " ~ row.field_address.address_name ~ ", " ~ row.field_address.street }} </p>
+  {% endif %}
+  {% if row.field_address.city is not empty %}
+    <p> {{ "CITY : " ~ row.field_address.city }} </p>
+  {% endif %}
+  {% if row.field_address.zipcode is not empty %}
+    <p> {{ "ZIPCODE : " ~ row.field_address.zipcode }} </p>
+  {% endif %}
+  {% if row.field_address.lat is not empty and row.field_address.lon is not empty %}
+    <p> {{ "GEO LOCATION : " ~ row.field_address.lat ~ ', ' ~ row.field_address.lon }} </p>
+  {% endif %}
+  {% if row.field_email.value is not empty %}
+    <p> {{ "EMAIL : " ~ row.field_email.value }} </p>
+  {% endif %}
+  {% if row.field_phone_number.value is not empty %}
+    <p> {{ "PHONE NUMBER : " ~ row.field_phone_number.value }} </p>
+  {% endif %}
+  {% if row.field_website.value is not empty %}
+    <p> {{ "WEBSITE : " ~ row.field_website.value }} </p>
+  {% endif %}
+  {% if row.field_company.entity.title.value is not empty %}
+    <p> {{ "COMPANY : " ~ row.field_company.entity.title.value }}</p>
+  {% endif %}
+  {% if row.field_bs.value is not empty %}
+    <p> <em> {{ "BS : " ~ row.field_bs.value }} </em></p>
+  {% endif %}
+  {% if row.field_catch_phrase.value is not empty %}
+    <p> <em> {{ "CATCH PHRASE : " ~ row.field_catch_phrase.value }} </em></p>
+  {% endif %}
+  <hr>
+{% endfor %}

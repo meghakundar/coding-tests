@@ -1,0 +1,19 @@
+uuid: affcbd17-770d-456e-ae0a-06cd2ce2fd07
+langcode: en
+status: true
+dependencies:
+  module:
+    - geomap_field
+    - node
+id: node.field_address
+field_name: field_address
+entity_type: node
+type: geomap
+settings: {  }
+module: geomap_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

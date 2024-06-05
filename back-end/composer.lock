@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c7f9834a9ee4515c02a9069bbf450236",
+    "content-hash": "bb76066a94e967628a21a179468ac1f9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -865,6 +865,63 @@
             "time": "2024-04-06T00:00:28+00:00"
         },
         {
+            "name": "custom/leaflet",
+            "version": "v1.3.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/Leaflet/Leaflet/archive/v1.3.4.zip"
+            },
+            "type": "drupal-library"
+        },
+        {
+            "name": "cweagans/composer-patches",
+            "version": "1.7.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cweagans/composer-patches.git",
+                "reference": "e190d4466fe2b103a55467dfa83fc2fecfcaf2db"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cweagans/composer-patches/zipball/e190d4466fe2b103a55467dfa83fc2fecfcaf2db",
+                "reference": "e190d4466fe2b103a55467dfa83fc2fecfcaf2db",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 || ^2.0",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "composer/composer": "~1.0 || ~2.0",
+                "phpunit/phpunit": "~4.6"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "cweagans\\Composer\\Patches"
+            },
+            "autoload": {
+                "psr-4": {
+                    "cweagans\\Composer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Cameron Eagans",
+                    "email": "me@cweagans.net"
+                }
+            ],
+            "description": "Provides a way to patch Composer packages.",
+            "support": {
+                "issues": "https://github.com/cweagans/composer-patches/issues",
+                "source": "https://github.com/cweagans/composer-patches/tree/1.7.3"
+            },
+            "time": "2022-12-20T22:53:13+00:00"
+        },
+        {
             "name": "dflydev/dot-access-data",
             "version": "v3.0.2",
             "source": {
@@ -1465,6 +1522,180 @@
             "description": "Core and its dependencies with known-compatible minor versions. Require this project INSTEAD OF drupal/core."
         },
         {
+            "name": "drupal/geolocation_provider",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/geolocation_provider.git",
+                "reference": "1.0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/geolocation_provider-1.0.3.zip",
+                "reference": "1.0.3",
+                "shasum": "5c4559558c72e134a287568967c094db0cf64f3f"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.3",
+                    "datestamp": "1714636705",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Alex fayolle",
+                    "homepage": "https://www.drupal.org/user/3662850"
+                },
+                {
+                    "name": "judapriest",
+                    "homepage": "https://www.drupal.org/user/2506328"
+                },
+                {
+                    "name": "Martygraphie",
+                    "homepage": "https://www.drupal.org/user/3568564"
+                },
+                {
+                    "name": "sbruyas",
+                    "homepage": "https://www.drupal.org/user/965742"
+                }
+            ],
+            "description": "Geolocation provider manager. Allow developers to use and define multiple geolocation providers using the Drupal 8 Plugin API.",
+            "homepage": "https://www.drupal.org/project/geolocation_provider",
+            "support": {
+                "source": "https://git.drupalcode.org/project/geolocation_provider"
+            }
+        },
+        {
+            "name": "drupal/geomap_field",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/geomap_field.git",
+                "reference": "1.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/geomap_field-1.0.2.zip",
+                "reference": "1.0.2",
+                "shasum": "2f843d6323a1071e4b164faf8d802331228555c4"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10",
+                "drupal/geolocation_provider": "*",
+                "drupal/map_provider": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.2",
+                    "datestamp": "1714641779",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Alex fayolle",
+                    "homepage": "https://www.drupal.org/user/3662850"
+                },
+                {
+                    "name": "Anwoon",
+                    "homepage": "https://www.drupal.org/user/3624419"
+                },
+                {
+                    "name": "Martygraphie",
+                    "homepage": "https://www.drupal.org/user/3568564"
+                },
+                {
+                    "name": "nicolas.tachet",
+                    "homepage": "https://www.drupal.org/user/3712042"
+                },
+                {
+                    "name": "sbruyas",
+                    "homepage": "https://www.drupal.org/user/965742"
+                }
+            ],
+            "description": "Provide a new field type to store address (using geolocation and map visualisation). Also provide a field formatter to display the field as a map.",
+            "homepage": "https://www.drupal.org/project/geomap_field",
+            "support": {
+                "source": "https://git.drupalcode.org/project/geomap_field"
+            }
+        },
+        {
+            "name": "drupal/map_provider",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/map_provider.git",
+                "reference": "1.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/map_provider-1.0.1.zip",
+                "reference": "1.0.1",
+                "shasum": "c838129806a605c8eabf96afad9daff9122ad9a2"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.1",
+                    "datestamp": "1676043490",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Alex fayolle",
+                    "homepage": "https://www.drupal.org/user/3662850"
+                },
+                {
+                    "name": "Anwoon",
+                    "homepage": "https://www.drupal.org/user/3624419"
+                },
+                {
+                    "name": "Martygraphie",
+                    "homepage": "https://www.drupal.org/user/3568564"
+                },
+                {
+                    "name": "sbruyas",
+                    "homepage": "https://www.drupal.org/user/965742"
+                }
+            ],
+            "description": "Map provider manager. Allow developers to use and define multiple map providers using the Drupal 8 Plugin API. Also include a render element to display a map provider using Leaflet.",
+            "homepage": "https://www.drupal.org/project/map_provider",
+            "support": {
+                "source": "https://git.drupalcode.org/project/map_provider"
+            }
+        },
+        {
             "name": "drupal/migrate_plus",
             "version": "6.0.2",
             "source": {
@@ -1526,6 +1757,77 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/migrate_plus",
                 "issues": "https://www.drupal.org/project/issues/migrate_plus",
+                "slack": "#migrate"
+            }
+        },
+        {
+            "name": "drupal/migrate_tools",
+            "version": "6.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/migrate_tools.git",
+                "reference": "6.0.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/migrate_tools-6.0.4.zip",
+                "reference": "6.0.4",
+                "shasum": "63c571aefece96b199ce8b8f90da648186502be4"
+            },
+            "require": {
+                "drupal/core": ">=9.1",
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "drupal/migrate_plus": ">=5",
+                "drupal/migrate_source_csv": ">=3",
+                "drush/drush": ">=11"
+            },
+            "suggest": {
+                "drupal/migrate_plus": ">=5",
+                "drush/drush": ">=11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "6.0.4",
+                    "datestamp": "1707330330",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": ">=9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Ryan",
+                    "homepage": "https://www.drupal.org/u/mikeryan",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Lucas Hedding",
+                    "homepage": "https://www.drupal.org/u/heddn",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "mikeryan",
+                    "homepage": "https://www.drupal.org/user/4420"
+                }
+            ],
+            "description": "Tools to assist in developing and running migrations.",
+            "homepage": "http://drupal.org/project/migrate_tools",
+            "support": {
+                "source": "https://git.drupalcode.org/project/migrate_tools",
+                "issues": "https://www.drupal.org/project/issues/migrate_tools",
                 "slack": "#migrate"
             }
         },

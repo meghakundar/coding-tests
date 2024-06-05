@@ -1,0 +1,32 @@
+uuid: a877f9dd-f204-4d3d-846b-8e4efabab5f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.users.field_address
+    - field.field.node.users.field_company
+    - field.field.node.users.field_email
+    - field.field.node.users.field_phone_number
+    - field.field.node.users.field_username
+    - field.field.node.users.field_website
+    - node.type.users
+  module:
+    - user
+id: node.users.teaser
+targetEntityType: node
+bundle: users
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_address: true
+  field_company: true
+  field_email: true
+  field_phone_number: true
+  field_username: true
+  field_website: true

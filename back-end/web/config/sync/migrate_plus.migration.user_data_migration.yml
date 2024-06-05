@@ -1,0 +1,81 @@
+uuid: a41ad722-d928-4cd3-afcd-f8b975b5b35e
+langcode: en
+status: true
+dependencies: {  }
+id: user_data_migration
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: json_migration
+label: 'User company data'
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  constants:
+    country: USA
+    info: ''
+  urls:
+    - 'https://jsonplaceholder.typicode.com/users'
+  item_selector: /
+  fields:
+    -
+      name: id
+      label: Id
+      selector: id
+    -
+      name: name
+      label: Name
+      selector: name
+    -
+      name: username
+      label: Username
+      selector: username
+    -
+      name: email
+      label: Email
+      selector: email
+    -
+      name: address
+      label: Address
+      selector: address
+    -
+      name: phone
+      label: Phone
+      selector: phone
+    -
+      name: website
+      label: Website
+      selector: website
+    -
+      company: company
+      label: Company
+      selector: company
+  ids:
+    id:
+      type: string
+process:
+  title: name
+  field_username: username
+  field_email: email
+  field_address/address_name: address/street
+  field_address/street: address/suite
+  field_address/city: address/city
+  field_address/zipcode: address/zipcode
+  field_address/country: constants/country
+  field_address/latlon/lat: address/geo/lat
+  field_address/latlon/lon: address/geo/lng
+  field_phone_number: phone
+  field_website: website
+  field_company/target_id:
+    plugin: migration_lookup
+    migration: company_data_migration
+    source: id
+    no_stub: true
+destination:
+  plugin: 'entity:node'
+  default_bundle: users
+migration_dependencies:
+  required:
+    - company_data_migration

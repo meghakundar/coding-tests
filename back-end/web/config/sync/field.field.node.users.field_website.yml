@@ -1,0 +1,19 @@
+uuid: e03499dc-c94f-4202-8240-dcfea0fa5b4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_website
+    - node.type.users
+id: node.users.field_website
+field_name: field_website
+entity_type: node
+bundle: users
+label: Website
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

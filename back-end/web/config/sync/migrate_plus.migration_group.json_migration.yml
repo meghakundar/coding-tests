@@ -1,0 +1,10 @@
+uuid: 6e9c8ffc-86ef-488c-a261-df278e9c3e36
+langcode: en
+status: true
+dependencies: {  }
+id: json_migration
+label: 'Json Migration'
+description: 'JSON Migration'
+source_type: ''
+module: null
+shared_configuration: null

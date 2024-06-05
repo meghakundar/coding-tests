@@ -1,0 +1,11 @@
+<?php
+
+function json_migration_theme($existing, $type, $theme, $path) {
+  return   [
+    'organized_data' => [
+      'variables' => [
+        'data' => [],
+      ],
+    ],
+  ];
+}

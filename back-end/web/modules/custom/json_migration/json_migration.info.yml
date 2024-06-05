@@ -1,0 +1,9 @@
+name: Json Migration
+description: Migrates the content & few tweaks for our site.
+package: Custom
+type: module
+core_version_requirement: ^9.4 || ^10
+dependencies:
+  - drupal:geomap_field
+  - drupal:migrate_plus
+  - drupal:migrate_tools

@@ -1,0 +1,74 @@
+uuid: 5e4cfc1e-0909-47e7-bc8c-f5507fde83fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.users.field_address
+    - field.field.node.users.field_company
+    - field.field.node.users.field_email
+    - field.field.node.users.field_phone_number
+    - field.field.node.users.field_username
+    - field.field.node.users.field_website
+    - node.type.users
+  module:
+    - geomap_field
+    - user
+id: node.users.default
+targetEntityType: node
+bundle: users
+mode: default
+content:
+  field_address:
+    type: geomap_default
+    label: hidden
+    settings:
+      map_provider: 'yaml_map_provider:osm'
+      height: 350px
+      width: 350px
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_company:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_email:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_phone_number:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_username:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_website:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

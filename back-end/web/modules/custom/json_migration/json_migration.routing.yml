@@ -1,0 +1,7 @@
+json_migration.content:
+  path: '/data'
+  defaults:
+    _controller: '\Drupal\json_migration\Controller\JsonDataController::content'
+    _title: 'Displays Company & Users Data.'
+  requirements:
+    _permission: 'access content'

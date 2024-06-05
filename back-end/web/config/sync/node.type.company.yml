@@ -1,0 +1,18 @@
+uuid: f4466413-c972-43e7-a3d1-68f2218e915a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Company
+type: company
+description: 'This content type is used to store company data.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

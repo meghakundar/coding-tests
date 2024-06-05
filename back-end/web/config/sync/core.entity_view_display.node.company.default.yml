@@ -1,0 +1,35 @@
+uuid: 8a0ffb0c-7b15-4595-b101-be96da971170
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.company.field_bs
+    - field.field.node.company.field_catch_phrase
+    - node.type.company
+  module:
+    - user
+id: node.company.default
+targetEntityType: node
+bundle: company
+mode: default
+content:
+  field_bs:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_catch_phrase:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }
